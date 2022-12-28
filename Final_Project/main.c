@@ -17,6 +17,7 @@ int main()//PA2: CLK PA3:CE PA5:DIN PA6:DC PA7: RST
 	init_gpio_adc();
 	init_systick();
 	init_LED();
+	Timer0_init();
 	while(1)
 	{
 		led_control();
@@ -41,11 +42,11 @@ void TIMER0A_Handler (void){
 	else											
 		TIMER0->TAILR=LOW;
 	if(motors==1)
-		GPIOF->DATA  ^= 4; //toggle PB2 pin
+		GPIOB->DATA  ^= 4; //toggle PB2 pin
 	else if(motors==2)
-		GPIOF->DATA  ^= 2; //toggle PB1 pin
+		GPIOB->DATA  ^= 2; //toggle PB1 pin
 	else if(motors==0)
-		GPIOF->DATA  = 0; //not working
+		GPIOB->DATA  = 0; //not working
 	TIMER0->ICR |=0x01; 
 	return;
 }

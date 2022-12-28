@@ -163,11 +163,11 @@ void init_GPIOB()
 	__ASM("NOP");
 	__ASM("NOP");
 	__ASM("NOP");
-	GPIOF->DIR			|= 0x06; //set PB2 and PB3 as output
-  GPIOF->AFSEL		&= (0xFFFFFFF3);  // Regular port function
-	GPIOF->PCTL			&= 0xFFFF00FF;  // No alternate function
-	GPIOF->AMSEL		=0; //Disable analog
-	GPIOF->DEN			|=0x06; // Enable port digital
+	GPIOB->DIR			|= 0x06; //set PB2 and PB3 as output
+  GPIOB->AFSEL		&= (0xFFFFFFF3);  // Regular port function
+	GPIOB->PCTL			&= 0xFFFF00FF;  // No alternate function
+	GPIOB->AMSEL		=0; //Disable analog
+	GPIOB->DEN			|=0x06; // Enable port digital
 	
 }
 void Timer0_init(void){
