@@ -16,19 +16,18 @@ int main()//PA2: CLK PA3:CE PA5:DIN PA6:DC PA7: RST
 	init_gpio_adc_ain1();
 	init_gpio_adc();
 	init_systick();
+	init_GPIOB();
 	init_LED();
 	Timer0_init();
 	while(1)
 	{
 		led_control();
-		
-		
 	}
 }
 void SysTick_Handler( )
 {
-		data_sensor=take_value_sensor()/3;
-		data_pot=take_value_pot()/5;
+		data_sensor=take_value_sensor()/24;
+		data_pot=take_value_pot()/40;
 		print_number(data_sensor);
 		printR2Hex_data(data_pot);
 		DELAY100();
