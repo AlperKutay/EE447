@@ -213,7 +213,7 @@ int led_control()
 		GPIOB->DATA  = 4;
 		motors=1;
 	}
-	else if(data_sensor<data_pot+3 && data_sensor>data_pot-3)//Blue 
+	else if(data_sensor<(data_pot+3) && data_sensor>(data_pot-3))//Blue 
 	{
 		GPIOF->DATA = 0x04;
 		motors=0;

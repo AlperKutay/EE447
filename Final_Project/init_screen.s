@@ -51,6 +51,8 @@ init_screen			PUSH	{LR}
 					MOV		R5,#0x0C			;H=0
 					BL		WritetoDR
 					
+					
+					
 					MOV		R5,#0x80			;Adress of X=0
 					BL		WritetoDR
 			

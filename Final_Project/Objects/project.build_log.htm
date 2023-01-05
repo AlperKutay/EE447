@@ -3,30 +3,196 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ÂµVision V5.36.0.0
-Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: alper kutzy ozbek, odtü, LIC=RC93N-YNPUK-DYLV3-APJ75-AGN90-N27N0
+IDE-Version: ÂµVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: alper Kutay ÖZBEK, odtü, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain:       MDK-Lite  Version: 5.38.0.0
 Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.16
-Assembler:       Armasm.exe V6.16
-Linker/Locator:  ArmLink.exe V6.16
-Library Manager: ArmAr.exe V6.16
-Hex Converter:   FromElf.exe V6.16
-CPU DLL:         SARMCM3.DLL V5.36.0.0
-Dialog DLL:      DCM.DLL V1.17.3.0
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
 Target DLL:      lmidk-agdi.dll V???
-Dialog DLL:      TCM.DLL V1.53.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\alper\Desktop\EE\EE4-1\EE 447\Final_Project\project.uvprojx
-Project File Date:  12/25/2022
+Project File Date:  01/05/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'Target 1'
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling delay100.s...
+"print.s", line 74: Warning: A1488W: PROC/FUNC at line 24 in 'print.s' without matching ENDP/ENDFUNC
+   74 000000c6 printR2Hex_dete PROC
+"print.s", line 146: Warning: A1313W: Missing END directive at end of file
+  146 0000018e 
+"print.s", line 146: Warning: A1581W: Added 2 bytes of padding at address 0x18e
+  146 00000190 
+0 Errors, 3 Warnings
+assembling print.s...
+"init_screen.s", line 33 (column 14): Warning: A1865W: '#' not seen before constant expression
+   33 00000026      AND  R0,0xBF    ;0x1011 1111
+                            ^
+0 Errors, 1 Warning
+assembling init_screen.s...
+"cursor_settings.s", line 53: Warning: A1313W: Missing END directive at end of file
+   53 0000005a 
+"cursor_settings.s", line 53: Warning: A1581W: Added 2 bytes of padding at address 0x5a
+   53 0000005c 
+0 Errors, 2 Warnings
+assembling cursor_settings.s...
+"init_lcd.s", line 104: Warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+  104 000000b2      ENDP
+"init_lcd.s", line 106: Warning: A1313W: Missing END directive at end of file
+  106 000000b2 
+"init_lcd.s", line 106: Warning: A1581W: Added 2 bytes of padding at address 0xb2
+  106 000000b4 
+0 Errors, 3 Warnings
+assembling init_lcd.s...
+assembling OutStr.s...
+assembling startup_TM4C123.s...
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+44 warnings generated.
+compiling system_TM4C123.c...
 main.c(1): warning: In file included from...
 C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
@@ -167,41 +333,45 @@ int new_number,data_256_sensor[256],index=0;
 ./Init.h(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 int new_number,data_256_sensor[256],index=0;
 ^
-./Init.h(11): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(11): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 void init_gpio_adc();
                   ^
                    void
-./Init.h(12): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(12): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 int take_value_sensor();
                      ^
                       void
-./Init.h(14): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(14): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 void init_gpio_adc_ain1();
                        ^
                         void
-./Init.h(15): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(15): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 int take_value_pot();
                   ^
                    void
-./Init.h(16): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(16): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 void init_systick();
                  ^
                   void
-./Init.h(19): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(19): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 void init_LED();
              ^
               void
-./Init.h(20): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(20): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 void init_GPIOB();
                ^
                 void
-./Init.h(21): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+./Init.h(21): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 int led_control();
                ^
                 void
 ./Init.h(27): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
                         msg1[i]=number-(new_number*10)+48;      
                                ~~~~~~~~~~~~~~~~~~~~~~~^~~
+./Init.h(40): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void init_gpio_adc()
+                  ^
+                   void
 ./Init.h(55): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
         ADC0->EMUX &= ~0xF000;
                    ~~ ^~~~~~~
@@ -212,9 +382,10 @@ void init_gpio_adc()
 void init_gpio_adc();
      ^
                    void
-./Init.h(40): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void init_gpio_adc()
-                  ^
+./Init.h(61): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void init_gpio_adc_ain1()
+                       ^
+                        void
 ./Init.h(76): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
         ADC1->ACTSS &= ~0x04;
                     ~~ ^~~~~
@@ -228,9 +399,10 @@ void init_gpio_adc_ain1()
 void init_gpio_adc_ain1();
      ^
                         void
-./Init.h(61): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void init_gpio_adc_ain1()
-                       ^
+./Init.h(84): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void init_systick()
+                 ^
+                  void
 ./Init.h(84): warning: no previous prototype for function 'init_systick' [-Wmissing-prototypes]
 void init_systick()
      ^
@@ -238,9 +410,10 @@ void init_systick()
 void init_systick();
      ^
                   void
-./Init.h(84): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void init_systick()
-                 ^
+./Init.h(91): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int take_value_sensor()
+                     ^
+                      void
 ./Init.h(104): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
                         value_sensor=ADC0->SSFIFO3;
                                     ~~~~~~~^~~~~~~
@@ -251,9 +424,10 @@ int take_value_sensor()
 int take_value_sensor();
     ^
                       void
-./Init.h(91): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-int take_value_sensor()
-                     ^
+./Init.h(119): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int take_value_pot()
+                  ^
+                   void
 ./Init.h(132): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
                         value_pot=ADC1->SSFIFO2;
                                  ~~~~~~~^~~~~~~
@@ -264,9 +438,10 @@ int take_value_pot()
 int take_value_pot();
     ^
                    void
-./Init.h(119): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-int take_value_pot()
-                  ^
+./Init.h(147): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void init_LED()
+             ^
+              void
 ./Init.h(147): warning: no previous prototype for function 'init_LED' [-Wmissing-prototypes]
 void init_LED()
      ^
@@ -274,9 +449,10 @@ void init_LED()
 void init_LED();
      ^
               void
-./Init.h(147): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void init_LED()
-             ^
+./Init.h(160): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void init_GPIOB()
+               ^
+                void
 ./Init.h(160): warning: no previous prototype for function 'init_GPIOB' [-Wmissing-prototypes]
 void init_GPIOB()
      ^
@@ -284,9 +460,10 @@ void init_GPIOB()
 void init_GPIOB();
      ^
                 void
-./Init.h(160): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void init_GPIOB()
+./Init.h(208): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int led_control()
                ^
+                void
 ./Init.h(229): warning: no newline at end of file [-Wnewline-eof]
 }
  ^
@@ -297,44 +474,46 @@ int led_control()
 int led_control();
     ^
                 void
-./Init.h(208): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-int led_control()
-               ^
-main.c(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+main.c(3): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 extern void DELAY100();
                     ^
                      void
-main.c(4): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+main.c(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 extern void init_lcd();
                     ^
                      void
-main.c(5): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+main.c(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 extern void CursorSettings();
                           ^
                            void
-main.c(6): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+main.c(6): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 extern void init_screen();
                        ^
                         void
-main.c(7): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+main.c(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 extern void WritetoDR();
                      ^
                       void
-main.c(8): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+main.c(8): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
 void SysTick_Handler ( );
                      ^
                        void
-main.c(29): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+main.c(12): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main()//PA2: CLK PA3:CE PA5:DIN PA6:DC PA7: RST
+        ^
+         void
+main.c(27): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void SysTick_Handler( )
+                    ^
+                      void
+main.c(27): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
 void SysTick_Handler( )
      ^
 main.c(8): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
 void SysTick_Handler ( );
      ^
                        void
-main.c(29): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void SysTick_Handler( )
-                    ^
-main.c(53): warning: no newline at end of file [-Wnewline-eof]
+main.c(51): warning: no newline at end of file [-Wnewline-eof]
 }
  ^
 main.c(2): warning: In file included from...
@@ -392,19 +571,19 @@ int new_number,data_256_sensor[256],index=0;
 ./Init.h(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 int new_number,data_256_sensor[256],index=0;
 ^
-94 warnings generated.
+95 warnings generated.
 compiling main.c...
 linking...
-Program Size: Code=3044 RO-data=636 RW-data=0 ZI-data=1864  
-".\Objects\project.axf" - 0 Error(s), 94 Warning(s).
+Program Size: Code=2888 RO-data=636 RW-data=0 ZI-data=1864  
+".\Objects\project.axf" - 0 Error(s), 139 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
-                ARM.CMSIS.5.7.0
-                CMSIS (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.4.0
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
@@ -413,19 +592,19 @@ Package Vendor: Keil
    * Component: Startup Version: 1.0.1
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\_Target_1
-  C:\Users\alper\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
-  C:\Users\alper\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+  ./RTE/_Target_1
+  C:/Users/alper/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/alper/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.4.0
+   * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:1.0.1
-      Source file:   Device\Source\system_TM4C123.c
-      Source file:   Device\Source\ARM\startup_TM4C123.s
-      Include file:  Device\Include\TM4C123\TM4C123.h
-Build Time Elapsed:  00:00:01
+      Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/system_TM4C123.c
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
