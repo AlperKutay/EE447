@@ -163,11 +163,11 @@ void init_GPIOB()
 	__ASM("NOP");
 	__ASM("NOP");
 	__ASM("NOP");
-	GPIOB->DIR			|= 0x06; //set PB2 and PB1 as output
-  GPIOB->AFSEL		&= (0xFFFFFFF3);  // Regular port function
-	GPIOB->PCTL			&= 0xFFFF00FF;  // No alternate function
+	GPIOB->DIR			|= 0x30; //set PB2 and PB1 as output
+  //GPIOB->AFSEL		&= (0xFFFFFFF3);  // Regular port function
+	//GPIOB->PCTL			&= 0xFFFF00FF;  // No alternate function
 	GPIOB->AMSEL		=0; //Disable analog
-	GPIOB->DEN			|=0x06; // Enable port digital
+	GPIOB->DEN			|=0x30; // Enable port digital
 	
 }
 void Timer0_init(void){
@@ -207,22 +207,19 @@ void Timer0_init(void){
 
 int led_control()
 {
-	if(data_sensor>data_pot+3)//Green
-	{
-		GPIOF->DATA = 0x08;
-		GPIOB->DATA  = 4;
-		motors=1;
-	}
-	else if(data_sensor<(data_pot+3) && data_sensor>(data_pot-3))//Blue 
+	if(data_sensor>data_pot+3)//Blue
 	{
 		GPIOF->DATA = 0x04;
+		motors=1;
+	}
+	else if(data_sensor<(data_pot+3) && data_sensor>(data_pot-3))//Green 
+	{
+		GPIOF->DATA = 0x08;
 		motors=0;
-		GPIOB->DATA  = 0;
 	}
 	else if(data_sensor<data_pot-3)//Red 
 	{
 		GPIOF->DATA = 0x02;
-		GPIOB->DATA  = 2;
 		motors=2;
 	}
 	return(motors);

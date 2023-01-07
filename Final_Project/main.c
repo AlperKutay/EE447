@@ -22,11 +22,12 @@ int main()//PA2: CLK PA3:CE PA5:DIN PA6:DC PA7: RST
 	while(1)
 	{
 		led_control();
+		
 	}
 }
 void SysTick_Handler( )
 {
-		data_sensor=take_value_sensor()/24;
+		data_sensor=take_value_sensor();
 		data_pot=take_value_pot()/40;
 		print_number(data_sensor);
 		printR2Hex_data(data_pot);
@@ -41,11 +42,11 @@ void TIMER0A_Handler (void){
 	else											
 		TIMER0->TAILR=LOW;
 	if(motors==1)
-		GPIOB->DATA  ^= 4; //toggle PB2 pin
+		GPIOB->DATA  = 0x10; //toggle PB4 pin
 	else if(motors==2)
-		GPIOB->DATA  ^= 2; //toggle PB1 pin
+		GPIOB->DATA  = 0x20; //toggle PB5 pin
 	else if(motors==0)
-		GPIOB->DATA  = 0; //not working
+		GPIOB->DATA  = 0x0; //not working
 	TIMER0->ICR |=0x01; 
 	return;
 }
