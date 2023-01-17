@@ -20,10 +20,12 @@ NUMBERS			DCB		0x3C, 0x42, 0x81, 0x42, 0x3C ;0
 				
 				EXPORT	printR2Hex_data
 				EXPORT	printR2Hex_dete
+				EXPORT	printR2Hex_low
+				EXPORT	printR2Hex_high
 
 printR2Hex_data	PROC
-				PUSH	{LR}
-				MOV		R11,#1
+				PUSH	{LR} 		
+				MOV		R11,#0
 				MOV		R2,R0
 				MOV		R3,#100
 				UDIV	R1,R2,R3
@@ -73,7 +75,107 @@ printR2Hex_data	PROC
 				
 printR2Hex_dete	PROC
 				PUSH	{LR}
+				MOV		R11,#2
+				MOV		R2,R0
+				MOV		R3,#100
+				UDIV	R1,R2,R3
+				MUL		R3,R1
+				SUB		R2,R2,R3
+				
+				MOV		R3,#5
+				MUL		R1,R3
+				PUSH	{R1-R3}
+	
+				MOV		R10, #5
+				BL		CursorSettings
+				LDR		R9,=NUMBERS
+				ADD		R9,R1
+				MOV		R0,#0
+				BL		loop
+
+				
+				POP		{R1-R3}
+				MOV		R3,#10
+				UDIV	R1,R2,R3
+				MUL		R3,R1
+				SUB		R2,R2,R3
+				MOV		R3,#5
+				MUL		R1,R3
+
+				BL		DELAY100
+				MOV		R10, #15
+				BL		CursorSettings
+				LDR		R9,=NUMBERS
+				ADD		R9,R1
+				MOV		R0,#0
+				BL		loop
+
+				MOV		R3,#5
+				MUL		R2,R3
+
+				BL		DELAY100
+				MOV		R10, #25
+				BL		CursorSettings
+				LDR		R9,=NUMBERS
+				ADD		R9,R2
+				MOV		R0,#0
+				BL		loop
+				POP		{LR}
+				BX		LR	
+				
+printR2Hex_low	PROC
+				PUSH	{LR} 		
 				MOV		R11,#4
+				MOV		R2,R0
+				MOV		R3,#100
+				UDIV	R1,R2,R3
+				MUL		R3,R1
+				SUB		R2,R2,R3
+				
+				MOV		R3,#5
+				MUL		R1,R3
+				PUSH	{R1-R3}
+	
+				MOV		R10, #5
+				BL		CursorSettings
+				LDR		R9,=NUMBERS
+				ADD		R9,R1
+				MOV		R0,#0
+				BL		loop
+
+				
+				POP		{R1-R3}
+				MOV		R3,#10
+				UDIV	R1,R2,R3
+				MUL		R3,R1
+				SUB		R2,R2,R3
+				MOV		R3,#5
+				MUL		R1,R3
+
+				BL		DELAY100
+				MOV		R10, #15
+				BL		CursorSettings
+				LDR		R9,=NUMBERS
+				ADD		R9,R1
+				MOV		R0,#0
+				BL		loop
+
+				MOV		R3,#5
+				MUL		R2,R3
+
+				BL		DELAY100
+				MOV		R10, #25
+				BL		CursorSettings
+				LDR		R9,=NUMBERS
+				ADD		R9,R2
+				MOV		R0,#0
+				BL		loop
+				POP		{LR}
+				BX		LR	
+				
+printR2Hex_high	PROC
+				PUSH	{LR} 		
+				MOV		R11,#5
 				MOV		R2,R0
 				MOV		R3,#100
 				UDIV	R1,R2,R3

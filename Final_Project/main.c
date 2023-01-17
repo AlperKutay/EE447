@@ -9,6 +9,8 @@ void SysTick_Handler ( );
 void TIMER0A_Handler (void);
 extern void printR2Hex_data(int data);
 extern void printR2Hex_dete(int data);
+extern void printR2Hex_low(int data);
+extern void printR2Hex_high(int data);
 int main()//PA2: CLK PA3:CE PA5:DIN PA6:DC PA7: RST
 {
 	init_lcd();
@@ -27,12 +29,12 @@ int main()//PA2: CLK PA3:CE PA5:DIN PA6:DC PA7: RST
 }
 void SysTick_Handler( )
 {
-		data_sensor=take_value_sensor();
+		data_sensor=take_value_sensor()/24;
 		data_pot=take_value_pot()/40;
-		print_number(data_sensor);
 		printR2Hex_data(data_pot);
 		DELAY100();
 		printR2Hex_dete(data_sensor);
+
 }
 void TIMER0A_Handler (void){
 	 

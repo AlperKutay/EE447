@@ -59,6 +59,8 @@ init_screen			PUSH	{LR}
 					MOV		R5,#0x40			;Adress of Y=0
 					BL		WritetoDR
 					
+					;BL		Clear_Screen
+					
 					BL		wait
 					POP		{LR}
 					BX		LR
