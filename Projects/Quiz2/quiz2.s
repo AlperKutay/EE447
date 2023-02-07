@@ -3,19 +3,14 @@
 			EXPORT  	__main
 				
 __main		PROC
-			LDR			R0,=0x20000200
-			LDR			R1,=0x1
-			BL			SR1
-			STR			R1,[R0]
-done		B			done	
-
-
-SR2			ADD			R1,R1,#10
-			BX			LR	
-
-SR1			MUL			R1,R1,#20
-			PUSH		{LR}
-			BL			SR2
-			POP			{LR}
-			BX			LR
+			LDR			R0,=0x0F
+			LDR			R4,=0xF0000000
+			LDR			R1,=0xAD
+			
+			ASR			R3,R4,#2
+			
+			MOV			R5,#5
+			ENDP
+			END
+			
 			
